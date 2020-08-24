@@ -23,23 +23,7 @@
       </feature>
     </config-file>
 
-    <source-file src="src/android/sunmi.java" target-dir="src/com/example/plugin/"/>
-  </platform>
-
-  <platform name="ios">
-    
-    <config-file target="config.xml" parent="/widget">
-      <feature name="Sunmi">
-        <param name="ios-package" value="HWPSunmi" />
-      </feature>
-    </config-file>
-
-    <header-file src="src/ios/HWPSunmi.h" target-dir="SunmiPlugin"/>
-    <source-file src="src/ios/HWPSunmi.m" target-dir="SunmiPlugin"/>
-  </platform>
-
-  <platform name="wp7">
-    <source-file src="src/wp7/Sunmi.cs"/>
+    <source-file src="src/android/V1/java/com/sunmi/plugin/sunmi.java" target-dir="src/com/printer/sunmi/plugin/"/>
   </platform>
 
 </plugin>
