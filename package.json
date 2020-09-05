@@ -1,21 +1,21 @@
 {
-  "name": "cordova-plugin-zkcservice",
+  "name": "cordova-plugin-sunmi-printer",
   "version": "1.0.0",
-  "description": "Communication from your cordova application to an ZKC SmartDeviceAIDL service application.",
+  "description": "Link your cordova application to an SunmuDeviceAIDL service application.",
   "cordova": {
-    "id": "cordova-plugin-zkcservice",
+    "id": "cordova-plugin-sunmi-printer",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matsosos/cordova-plugin-zkcservice.git"
+    "url": "git+https://github.com/seboka-matsoso/cordova-plugin-sunmi-printer.git"
   },
   "keywords": [
     "Cordova",
     "Android",
-    "ZKC900/901",
+    "W5920",
     "Plugin",
     "POS",
     "Printer",
@@ -31,7 +31,7 @@
   "author": "Seboka Matsoso",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matsosos/cordova-plugin-zkcservice/issues"
+    "url": "https://github.com/matsosos/cordova-plugin-sunmi-printer/issues"
   },
-  "homepage": "https://github.com/matsosos/cordova-plugin-zkcservice#readme"
+  "homepage": "https://github.com/matsosos/cordova-plugin-sunmi-printer#readme"
 }
