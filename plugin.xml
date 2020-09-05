@@ -8,7 +8,7 @@
     <repo>https://github.com/seboka-matsoso/cordova-plugin-sunmi-printer.git</repo>
     <issue>https://github.com/matsosos/cordova-plugin-sunmi-printer/issues</issue>
    
-	<js-module name="SunmiService" src="www/sunmiservice.js">
+	<js-module name="SunmiService" src="www/sunmi.js">
             <clobbers target="SunmiService" />
     </js-module>
   
@@ -19,11 +19,11 @@
             </feature>
         </config-file>
         
-        <source-file src="src/android/SunmiService.java" target-dir="src/ls/co/sunmiplugin"/>		
-        <source-file src="aidl/android/ISunmiService.aidl" target-dir="src/com/smartdevice/aidl"/>
-        <source-file src="aidl/android/ICallback.aidl" target-dir="src/com/smartdevice/aidl"/>
+        <source-file src="src/android/SunmiService.java" target-dir="src/ls/co/sunmi"/>		
+        <source-file src="sdk/V1/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="src/com/sunmidevice/aidl"/>
+        <source-file src="sdk/V1/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="src/com/sunmidevice/aidl"/>
         <!-- Hack for Cordova android 7, not correctly loading aidl -->
-        <source-file src="aidl/android/ISunmiService.aidl" target-dir="app/src/main/aidl/com/smartdevice/aidl" />
-        <source-file src="aidl/android/ICallback.aidl" target-dir="app/src/main/aidl/com/smartdevice/aidl" />
+        <source-file src="sdk/V1/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="app/src/main/aidl/com/smartdevice/aidl" />
+        <source-file src="sdk/V1/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="app/src/main/aidl/com/smartdevice/aidl" />
     </platform>
 </plugin>
