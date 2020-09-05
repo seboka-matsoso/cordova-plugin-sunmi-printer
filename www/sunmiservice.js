@@ -1,6 +1,6 @@
 var exec = cordova.require('cordova/exec');
 
-var service = "ZKCService";
+var service = "SunmiService";
 
 exports.ToastIt = function(args, success, error) {
 	exec(success, error, service, "ToastIt", [args]);
