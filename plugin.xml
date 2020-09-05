@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.printer.sunmi"
-        version="0.7.0">
-
-  <name>Sunmi Printer</name>
-
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
-
-  <asset src="www/printer.js" target="js/printer.js"/>
-
-  <js-module src="www/printer.js" name="printer">
-    <clobbers target="printer" />
-  </js-module>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Sunmi Printer">
-        <param name="android-package" value="com.printer.sunmi"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/V1/java/com/sunmi/plugin/sunmi.java" target-dir="src/com/printer/sunmi/plugin/"/>
-  </platform>
-
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin id="cordova-plugin-zkcservice" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ZKCService</name>
+    <description>Communication from your cordova application to an ZKC SmartDeviceAIDL service application.</description>
+    <author>Seboka Matsoso</author>
+    <license>MIT</license>
+    <keywords>Cordova, Android, ZKC900/901, Plugin,POS, Printer</keywords>
+    <repo>https://github.com/matsosos/cordova-plugin-zkcservice.git</repo>
+    <issue>https://github.com/matsosos/cordova-plugin-zkcservice/issues</issue>
+   
+	<js-module name="ZKCService" src="www/ZKCService.js">
+            <clobbers target="ZKCService" />
+    </js-module>
+  
+    <platform name="android">     
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ZKCService" >
+                <param name="android-package" value="ls.co.zkcplugin.ZKCService"/>
+            </feature>
+        </config-file>
+        
+        <source-file src="src/android/ZKCService.java" target-dir="src/ls/co/zkcplugin"/>		
+        <source-file src="aidl/android/IZKCService.aidl" target-dir="src/com/smartdevice/aidl"/>
+        <source-file src="aidl/android/ICallback.aidl" target-dir="src/com/smartdevice/aidl"/>
+        <!-- Hack for Cordova android 7, not correctly loading aidl -->
+        <source-file src="aidl/android/IZKCService.aidl" target-dir="app/src/main/aidl/com/smartdevice/aidl" />
+        <source-file src="aidl/android/ICallback.aidl" target-dir="app/src/main/aidl/com/smartdevice/aidl" />
+    </platform>
 </plugin>
